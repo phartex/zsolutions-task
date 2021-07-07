@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.food__container{
+    width:15rem;
+    margin: 1rem;
+}
+
+/* .food__boxcon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.plus__icon{
+    background-color: #fa9e0d;
+    width: 30px;
+    border-radius: 10px 0 0 0;
+    justify-content: center;
+    align-items: center;
+}
+box-icon{
+    filter: invert(1);
+    fill: #fff;
+    text-align: center;
+    justify-self: center;
+    margin-left: 3px;
+}
+.food_starrating{
+    align-items: left;
+    justify-content: center;
+    align-items: center;
+}
+.food_starrating img{
+    width: 20px;
+    margin-right: 0.5rem;
+} */
+
+@media screen and (max-width:500px){
+    .container{
+        background-color: red;
+        padding-top: 2rem;
+        display: block;
+        width: 100%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .food__container{
+        width:100%;
+        padding: 1rem;
+        align-items: center;
+        margin: 1rem auto;
+    }
+}
