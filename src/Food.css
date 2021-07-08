@@ -41,7 +41,6 @@ box-icon{
 
 @media screen and (max-width:500px){
     .container{
-        background-color: red;
         padding-top: 2rem;
         display: block;
         width: 100%;

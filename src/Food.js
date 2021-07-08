@@ -1,12 +1,12 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import 'boxicons'
 import star from './img/star.png'
+import greyStar from './img/grey.png'
 import './Food.css'
 
 
 const Food = ({description,id,strMealThumb, strMeal,ratings}) => {
-  
-  
+ 
 function truncate(str,n){
   return str?.length > n ? str.substr(0, n-1) + "..." : str;
 }   
@@ -18,19 +18,26 @@ function truncate(str,n){
               <div className="card-body">
             <h5 className="card-title">{strMeal}</h5>
             <p className="card-text">{truncate(description,70)}</p>
-            <p>{ratings}</p>
-            {/* <div className="food__boxcon" >
-                  <div className='food_starrating'>
-                  <img src={star}/>
-                  <img src={star}/>
-                  <img src={star}/>
-                  <img src={star}/>
-                  </div>
-                  <div  className="plus__icon">
-                     <box-icon name='plus'></box-icon>
-                  </div>
-                
-            </div> */}
+            
+<div>
+     {
+      ratings? (
+        <div style={{display:'flex'}}>
+          <div>{
+                ([...Array(ratings)].map((item,index)=><img src={star} key={index} style={{width:'10px', height:'10px'}}/>))
+                }
+          </div>
+          <div>
+          {
+          ([...Array(5-ratings)].map((item,index)=><img src={greyStar} key={index} style={{width:'10px',height:'10px'}}/>))
+          }
+          </div>
+          </div>
+          ):null
+            }
+          
+            </div>
+           
       </div>
     </div>
       </div>
